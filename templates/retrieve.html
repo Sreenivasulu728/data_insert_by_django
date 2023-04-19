@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1
+        {
+            background-color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow" text="blue">
+    <center>
+        <h1>Details of Student</h1>
+        <table border="3px">
+            <tr>
+                <th>student id</th>
+                <th>student name</th>
+                <th>student email</th>
+            </tr>
+            {% for so in SQS %}
+                <tr>
+                    <th>{{so.sid}}</th>
+                    <th>{{so.name}}</th>
+                    <th>{{so.email}}</th>
+                </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
